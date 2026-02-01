@@ -1,38 +1,45 @@
-💰 ₹500 Note Volume Calculator (React + TypeScript)
+Here’s a clean, professional **README.md** you can directly drop into your project.
+I’ve written it in a way that’s easy to understand for recruiters, teammates, or clients.
 
-A simple React (TSX) application that calculates the physical volume of ₹500 currency notes and determines how many cash bags are required to store them based on predefined volume constraints.
+---
+
+# 💰 ₹500 Note Volume Calculator (React + TypeScript)
+
+A simple React (TSX) application that calculates the **physical volume of ₹500 currency notes** and determines how many **cash bags** are required to store them based on predefined volume constraints.
 
 The app visually represents:
 
-Full cash bags
+* Full cash bags
+* Remaining ₹500 notes
+* A warning when no extra notes are left
 
-Remaining ₹500 notes
+---
 
-A warning when no extra notes are left
+## 🚀 Features
 
-🚀 Features
+* ✅ Select ₹500 denomination (extendable)
+* 🔢 Enter number of notes
+* 📐 Calculates total volume in **mm³**
+* 🎒 Determines number of full cash bags required
+* 🧾 Displays remaining notes visually
+* 🔴 Shows warning text when **0 notes are left**
+* ⚛️ Built using **React + TypeScript (TSX)**
+* 🎨 Clean and minimal UI
 
-✅ Select ₹500 denomination (extendable)
+---
 
-🔢 Enter number of notes
+## 📏 Volume Rules Used
 
-📐 Calculates total volume in mm³
+| Item              | Volume (mm³)   |
+| ----------------- | -------------- |
+| ₹500 Note         | 1,089 mm³      |
+| Cash Bag Capacity | 16,200,000 mm³ |
 
-🎒 Determines number of full cash bags required
+---
 
-🧾 Displays remaining notes visually
+## 🧠 Calculation Logic
 
-🔴 Shows warning text when 0 notes are left
-
-⚛️ Built using React + TypeScript (TSX)
-
-🎨 Clean and minimal UI
-
-📏 Volume Rules Used
-Item	Volume (mm³)
-₹500 Note	1,089 mm³
-Cash Bag Capacity	16,200,000 mm³
-🧠 Calculation Logic
+```text
 Total Volume = Number of Notes × 1089
 
 Full Bags = floor(Total Volume ÷ 16,200,000)
@@ -40,28 +47,32 @@ Full Bags = floor(Total Volume ÷ 16,200,000)
 Remaining Volume = Total Volume % 16,200,000
 
 Remaining Notes = floor(Remaining Volume ÷ 1089)
+```
 
-🖼️ Visual Output Behavior
+---
 
-📦 Displays one bag image per full bag
+## 🖼️ Visual Output Behavior
 
-💵 Displays remaining ₹500 note images
+* 📦 Displays **one bag image per full bag**
+* 💵 Displays **remaining ₹500 note images**
+* 🔴 If remaining notes = `0`, shows:
 
-🔴 If remaining notes = 0, shows:
+  > “0 notes left — bag is enough for this number of notes.”
 
-“0 notes left — bag is enough for this number of notes.”
+---
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-React.js
+* **React.js**
+* **TypeScript**
+* **CSS / Tailwind CSS (optional)**
+* **Client-side only logic**
 
-TypeScript
+---
 
-CSS / Tailwind CSS (optional)
+## 📂 Project Structure (Example)
 
-Client-side only logic
-
-📂 Project Structure (Example)
+```text
 src/
 ├── components/
 │   └── Rs500VolumeCalculator.tsx
@@ -69,38 +80,48 @@ src/
 │   ├── bag.png
 │   └── 500-note.png
 └── README.md
+```
 
-▶️ How to Run Locally
+---
+
+## ▶️ How to Run Locally
+
+```bash
 npm install
 npm run dev
-
+```
 
 or (for CRA):
 
+```bash
 npm start
-
+```
 
 Then open:
-http://localhost:3000
+`http://localhost:3000`
 
-🔧 Customization Ideas
+---
 
-➕ Add ₹100 / ₹200 / ₹2000 denominations
+## 🔧 Customization Ideas
 
-📱 Make it mobile-first
+* ➕ Add ₹100 / ₹200 / ₹2000 denominations
+* 📱 Make it mobile-first
+* 🎞️ Animate bag filling
+* 📊 Show exact remaining volume
+* 🧮 Auto-calculate without button click
 
-🎞️ Animate bag filling
+---
 
-📊 Show exact remaining volume
+## ⚠️ Disclaimer
 
-🧮 Auto-calculate without button click
-
-⚠️ Disclaimer
-
-This project is for educational and visualization purposes only.
+This project is for **educational and visualization purposes only**.
 The note volume values are assumed for demonstration and may not represent real-world currency dimensions.
 
-👨‍💻 Author
+---
 
-Saiprasad
+## 👨‍💻 Author
+
+**Saiprasad**
 React & TypeScript Developer
+
+---
