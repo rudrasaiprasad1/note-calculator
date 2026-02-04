@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const NOTE_VOLUME = 1089; // mm³
 const BAG_VOLUME = 16200000; // mm³
-const LORRY_VOLUME = 23840000000; // mm³
+// const LORRY_VOLUME = 23840000000; // mm³
 const LORRY_VOLUME_MAX = 26760000000; // mm³
 
 export default function Rs500VolumeCalculator() {
