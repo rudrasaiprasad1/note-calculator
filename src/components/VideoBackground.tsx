@@ -35,7 +35,7 @@ export default function VideoBackground({
             )}
 
             {/* Content on top */}
-            <div className="relative z-10 flex h-full w-full items-center justify-center">
+            <div className="relative z-10 flex flex-col h-full w-full items-center justify-center">
                 {children}
             </div>
         </div>

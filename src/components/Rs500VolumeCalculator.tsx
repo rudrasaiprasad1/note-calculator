@@ -5,6 +5,7 @@ import { useState } from "react";
 
 import heroVideo from '/artifacts/658671be-f366-4970-9f30-ba68232bb512.mp4';
 import VideoBackground from "./VideoBackground";
+import AutoTyping from "./AutoTyping";
 
 const NOTE_VOLUME = 1089; // mm³
 const BAG_VOLUME = 16200000; // mm³
@@ -54,7 +55,9 @@ export default function Rs500VolumeCalculator() {
     return (
         // <div className="p-6  border rounded-xl flex justify-center align-middle shadow h-screen w-full bg-radial-[at_50%_75%] from-sky-200 via-blue-400 to-indigo-900 to-90% bg-cover bg-center text-white">
         <VideoBackground videoSrc={heroVideo} overlay={true}>
-            <div className="flex flex-col ">
+            <AutoTyping texts={["Enter Number of ₹500 Notes It will calculate volume and tell you."]} speed={100} deleteSpeed={50} pauseTime={1500} />
+            <div className="flex flex-col z-50 mt-35 md:mt-25 w-full max-w-md p-6 bg-black/50 rounded-lg shadow-lg">
+
 
 
                 <h2 className="text-lg font-semibold mb-4 text-white">
@@ -98,7 +101,7 @@ export default function Rs500VolumeCalculator() {
 
                 {/* 🎒 Bag Result */}
                 {!showLorry && bags !== null && (
-                    <div className="mt-6 flex flex-col items-center border rounded-lg p-4 shadow-sm">
+                    <div className="mt-6 flex flex-col items-center  border-white border-2 border-dashed rounded-lg p-4 shadow-sm">
                         <div className="flex gap-3 mb-4 flex-wrap shadow sm:shadow-md p-3 rounded-lg hover:shadow-lg transition-shadow duration-300">
                             <div
                                 className="font-bold text-white bg-blue-600 w-20 h-20 flex items-center justify-center rounded-lg"
@@ -111,14 +114,14 @@ export default function Rs500VolumeCalculator() {
                         </div>
 
                         {remainingNotes === 0 ? (
-                            <p className="text-red-600 font-semibold">
+                            <p className="text-red-200 font-semibold">
                                 Bag is enough for this {`🪙₹${Number(notes) * Number(500)}`}
                             </p>
                         ) : (
                             <>
                                 <div className="flex gap-3 mb-4 flex-wrap shadow sm:shadow-md p-3 rounded-lg hover:shadow-lg transition-shadow duration-300">
                                     <div
-                                        className="font-bold text-white bg-blue-600 w-40 h-20 flex items-center justify-center rounded-lg m-2 "
+                                        className="font-bold text-lg text-white bg-blue-600 w-40 h-20 flex items-center justify-center rounded-lg m-2 "
                                     >{Number(remainingNotes)}</div>
                                     <img
                                         src="/artifacts/500-note-front.png"

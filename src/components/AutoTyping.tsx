@@ -51,7 +51,7 @@ const AutoTyping: React.FC<AutoTypingProps> = ({
 
     return (
         <div
-            className={`text-5xl md:text-9xl font-bold text-center h-[50px] transition-colors duration-300 ${textColor}`}
+            className={`text-5xl md:text-2xl font-bold text-center h-[50px] md:h-[25px] transition-colors duration-300 mb-15 md:mb-5 ${textColor}`}
         >
             {text}
             <span className="animate-ping">|</span>
