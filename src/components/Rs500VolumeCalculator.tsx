@@ -3,6 +3,9 @@
 import { BoxIcon } from "lucide-react";
 import { useState } from "react";
 
+import heroVideo from '/artifacts/658671be-f366-4970-9f30-ba68232bb512.mp4';
+import VideoBackground from "./VideoBackground";
+
 const NOTE_VOLUME = 1089; // mm³
 const BAG_VOLUME = 16200000; // mm³
 const LORRY_VOLUME_MAX = 26760000000; // mm³
@@ -49,18 +52,19 @@ export default function Rs500VolumeCalculator() {
     };
 
     return (
-        <div className="p-6  border rounded-xl flex justify-center align-middle shadow h-screen w-full bg-radial-[at_50%_75%] from-sky-200 via-blue-400 to-indigo-900 to-90% bg-cover bg-center text-white">
+        // <div className="p-6  border rounded-xl flex justify-center align-middle shadow h-screen w-full bg-radial-[at_50%_75%] from-sky-200 via-blue-400 to-indigo-900 to-90% bg-cover bg-center text-white">
+        <VideoBackground videoSrc={heroVideo} overlay={true}>
             <div className="flex flex-col ">
 
 
-                <h2 className="text-lg font-semibold mb-4">
+                <h2 className="text-lg font-semibold mb-4 text-white">
                     ₹500 Note Volume Calculator
                 </h2>
 
                 <input
                     type="number"
                     placeholder="Enter number of notes"
-                    className="border p-2 rounded w-full mb-3"
+                    className="border p-2 rounded w-full mb-3 text-white placeholder:text-white"
                     value={notes}
                     onChange={(e) => setNotes(Number(e.target.value))}
                 />
@@ -128,7 +132,8 @@ export default function Rs500VolumeCalculator() {
                     </div>
                 )}
             </div>
-        </div>
+        </VideoBackground>
+        // {/* </div> */}
     );
 }
 
